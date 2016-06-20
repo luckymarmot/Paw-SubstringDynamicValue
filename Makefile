@@ -12,5 +12,7 @@ install: clean build
 	mkdir -p "$(extensions_dir)$(identifier)/"
 	cp -r ./build/$(identifier)/* "$(extensions_dir)$(identifier)/"
 
+test: build
+
 archive: build
 	cd ./build/; zip -r SubstringDynamicValue.zip "$(identifier)/"
